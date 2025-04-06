@@ -1,0 +1,140 @@
+/* Home.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #fffbe6, #ffffff);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+nav {
+  background-color: #febd69;
+  color: #111;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+nav button {
+  background: none;
+  border: none;
+  margin-left: 1rem;
+  font-weight: 500;
+  color: #111;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+nav button:hover {
+  color: #232f3e;
+}
+
+/* Hero Section */
+section {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #fff3d6;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+section p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: auto;
+  color: #555;
+}
+
+/* Input Section */
+input, button {
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input {
+  border: 1px solid #ccc;
+  width: 250px;
+  margin-right: 1rem;
+}
+
+button {
+  background-color: #ffa41c;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #f08804;
+}
+
+/* Table */
+table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+  text-align: left;
+}
+
+table th {
+  background-color: #f3f3f3;
+  color: #111;
+}
+
+table tr:hover {
+  background-color: #fff6e5;
+}
+
+/* Messages */
+.message {
+  margin-top: 1rem;
+  font-weight: 500;
+  color: green;
+}
+
+.error {
+  color: red;
+  font-weight: 500;
+}
+
+/* Footer */
+footer {
+  background-color: #febd69;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #111;
+  margin-top: 3rem;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+}
+::-webkit-scrollbar {
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}

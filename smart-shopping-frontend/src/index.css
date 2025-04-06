@@ -1,0 +1,211 @@
+/* Reset & Base Styles */
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafc;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Header */
+h1, h2 {
+  text-align: center;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.75rem;
+  color: #1d4ed8;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+/* Input + Buttons */
+input[type="text"] {
+  border: 1px solid #d1d5db;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 320px;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+  outline: none;
+}
+
+button {
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 0.5rem;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button.primary {
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+  color: white;
+}
+
+button.primary:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.02);
+}
+
+button.secondary {
+  background-color: #374151;
+  color: white;
+}
+
+button.secondary:hover {
+  background-color: #1f2937;
+}
+
+/* Recommendation Table */
+.recommendation-wrapper {
+  margin-top: 2.5rem;
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.recommendation-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  min-width: 600px;
+}
+
+.recommendation-table th,
+.recommendation-table td {
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.recommendation-table th {
+  background-color: #f1f5f9;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.recommendation-table tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.recommendation-table tbody tr:hover {
+  background-color: #e0f2fe;
+  transition: background-color 0.2s ease;
+}
+
+/* Purchase History Items */
+.purchase-item {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.purchase-item:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Message Styles */
+.message {
+  text-align: center;
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+.message.success {
+  color: #16a34a;
+  font-weight: 500;
+}
+
+.message.error {
+  color: #dc2626;
+  font-weight: 500;
+}
+
+.message.loading {
+  color: #6b7280;
+  font-style: italic;
+  animation: pulse 1.5s infinite;
+}
+
+/* Utility Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+/* Footer (Optional) */
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .input-group {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
